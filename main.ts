@@ -28,18 +28,47 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         Othertxt.destroy()
         Starttxt.destroy()
         Blockylogo.destroy()
-        Gameerror = textsprite.create("Error: can't play game")
-        Notgigachad = textsprite.create("Bc ur not a ")
-        Notgigachad2 = textsprite.create("gigachad :troll:")
-        Notgigachad.setMaxFontHeight(0)
-        Sadz = sprites.create(assets.image`myImage`, SpriteKind.Player)
+        Gameerror = textsprite.create("Enjoy doggie")
         Gameerror.setOutline(1, 15)
         Gameerror.setPosition(80, 27)
-        Notgigachad.setOutline(1, 15)
-        Notgigachad2.setOutline(1, 15)
-        Notgigachad.setPosition(80, 68)
-        Notgigachad2.setPosition(80, 82)
-        Sadz.setPosition(80, 52)
+        Doggie = sprites.create(assets.image`myImage0`, SpriteKind.Player)
+        Doggie.setPosition(75, 55)
+        animation.runImageAnimation(
+        Doggie,
+        [img`
+            . . 4 4 4 . . . . 4 4 4 . . . . 
+            . 4 5 5 5 e . . e 5 5 5 4 . . . 
+            4 5 5 5 5 5 e e 5 5 5 5 5 4 . . 
+            4 5 5 4 4 5 5 5 5 4 4 5 5 4 . . 
+            e 5 4 4 5 5 5 5 5 5 4 4 5 e . . 
+            . e e 5 5 5 5 5 5 5 5 e e . . . 
+            . . e 5 f 5 5 5 5 f 5 e . . . . 
+            . . f 5 5 5 4 4 5 5 5 f . . f f 
+            . . f 4 5 5 f f 5 5 6 f . f 5 f 
+            . . . f 6 6 6 6 6 6 4 4 f 5 5 f 
+            . . . f 4 5 5 5 5 5 5 4 4 5 f . 
+            . . . f 5 5 5 5 5 4 5 5 f f . . 
+            . . . f 5 f f f 5 f f 5 f . . . 
+            . . . f f . . f f . . f f . . . 
+            `,img`
+            . . . . . . . . . . . . . . . . 
+            . . 4 4 4 . . . . 4 4 4 . . . . 
+            . 4 5 5 5 e . . e 5 5 5 4 . . . 
+            4 5 5 5 5 5 e e 5 5 5 5 5 4 . . 
+            4 5 5 4 4 5 5 5 5 4 4 5 5 4 . . 
+            e 5 4 4 5 5 5 5 5 5 4 4 5 e . . 
+            . e e 5 5 5 5 5 5 5 5 e e . . . 
+            . . e 5 f 5 5 5 5 f 5 e . . . . 
+            . . f 5 5 5 4 4 5 5 5 f . f f . 
+            . . . 4 5 5 f f 5 5 6 f f 5 f . 
+            . . . f 6 6 6 6 6 6 4 f 5 5 f . 
+            . . . f 5 5 5 5 5 5 5 4 5 f . . 
+            . . . . f 5 4 5 f 5 f f f . . . 
+            . . . . . f f f f f f f . . . . 
+            `],
+        500,
+        true
+        )
     } else if (Screen == "Home" && Selection == 2) {
         Screen = "None"
     }
@@ -54,9 +83,7 @@ controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
         }
     }
 })
-let Sadz: Sprite = null
-let Notgigachad2: TextSprite = null
-let Notgigachad: TextSprite = null
+let Doggie: Sprite = null
 let Gameerror: TextSprite = null
 let Selectionmax = 0
 let Selectionmin = 0
